@@ -56,8 +56,8 @@ class HomeController extends Controller
         // return auth()->user()->roles;
         // check the user permission and role end
 
-        return User::role('writer')->get();
-
+        // return User::role('writer')->get();
+        return auth()->user()->revokePermissionTo('edit post');
         return view('home');
     }
 }
