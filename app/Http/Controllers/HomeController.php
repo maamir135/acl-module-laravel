@@ -57,7 +57,7 @@ class HomeController extends Controller
         // check the user permission and role end
 
         // return User::role('writer')->get();
-        return auth()->user()->removeRole('writer');
+        // return auth()->user()->removeRole('writer');
         return view('home');
     }
 }
