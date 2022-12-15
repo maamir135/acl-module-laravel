@@ -43,7 +43,7 @@ class HomeController extends Controller
         // return "hello";
 
         // assign the permission to user
-        auth()->user()->givePermissionTo('write post');
+        // auth()->user()->givePermissionTo('write post');
         // assign the permission to user end
 
         // assign the role to user
@@ -51,7 +51,7 @@ class HomeController extends Controller
         // assign the permission to user end
 
         // check the user permission and role
-        return auth()->user()->getAllPermissions();
+        return auth()->user()->getRoleNames();
         // return auth()->user()->roles;
         // check the user permission and role end
 
