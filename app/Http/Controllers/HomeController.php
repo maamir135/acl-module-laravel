@@ -26,14 +26,20 @@ class HomeController extends Controller
     {
         // added role and permission in the tables
             // Role::create(['name'=>'writer']);
-           $permission = Permission::create(['name'=>'edit post']);
+        //    $permission = Permission::create(['name'=>'edit post']);
         // added role and permission in the tables end
 
         // permission can be assigned to the role
-            $role = Role::findById(1);
-            // $permission = Permission::findById(1);
-            $role->givePermissionTo($permission);
+            // $role = Role::findById(1);
+            $permission = Permission::findById(2);
+            // $role->givePermissionTo($permission);
         // permission can be assigned to the role end
+
+
+        // remove the permission from the role
+        $role = Role::findById(1);
+        $permission->removeRole($role);
+        // remove permission from the end
 
 
         return view('home');
