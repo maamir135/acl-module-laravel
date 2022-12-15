@@ -51,7 +51,7 @@ class HomeController extends Controller
         // assign the permission to user end
 
         // check the user permission and role
-        return auth()->user()->getRoleNames();
+        return auth()->user()->getPermissionsViaRoles();
         // return auth()->user()->roles;
         // check the user permission and role end
 
