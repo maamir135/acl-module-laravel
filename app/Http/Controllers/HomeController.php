@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use App\Models\User;
 class HomeController extends Controller
 {
     /**
@@ -51,9 +52,11 @@ class HomeController extends Controller
         // assign the permission to user end
 
         // check the user permission and role
-        return auth()->user()->getPermissionsViaRoles();
+        // return auth()->user()->getAllPermissions();
         // return auth()->user()->roles;
         // check the user permission and role end
+
+        return User::role('writer')->get();
 
         return view('home');
     }
