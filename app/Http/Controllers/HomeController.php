@@ -49,6 +49,12 @@ class HomeController extends Controller
         // assign the role to user
         // auth()->user()->assignRole('writer');
         // assign the permission to user end
+
+        // check the user permission and role
+        // return auth()->user()->permissions;
+        // return auth()->user()->roles;
+        // check the user permission and role end
+
         return view('home');
     }
 }
