@@ -31,17 +31,24 @@ class HomeController extends Controller
 
         // permission can be assigned to the role
             // $role = Role::findById(1);
-            $permission = Permission::findById(2);
+            // $permission = Permission::findById(2);
             // $role->givePermissionTo($permission);
         // permission can be assigned to the role end
 
 
         // remove the permission from the role
-        $role = Role::findById(1);
-        $permission->removeRole($role);
+        // $role = Role::findById(1);
+        // $permission->removeRole($role);
         // remove permission from the end
+        // return "hello";
 
+        // assign the permission to user
+        // auth()->user()->givePermissionTo('edit post');
+        // assign the permission to user end
 
+        // assign the role to user
+        // auth()->user()->assignRole('writer');
+        // assign the permission to user end
         return view('home');
     }
 }
